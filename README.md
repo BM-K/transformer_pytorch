@@ -91,31 +91,39 @@ python bleu.py --reference ./.data/multi30k/test2016.en --candidate prediction.t
   - target embedding / pre-softmax linear layer weight sharing. 
  
   
-## Testing 
-(train.py에서 layer, head값 변경)
+## Testing
+Normal
+
+de -> en
 
 layer 6, head 8
 - (training) ppl : 6.85121, acu : 85.685 %
 - (validation) ppl : 13.92095, acu: 62.202 %
 - (test) bleu : 0.37815
 
-layer 12, head 12
-- (training) ppl : 8.18509, acu : 80.748 %
-- (validation) ppl : 28.42237, acu: 50.873 %
-- (test) bleu : 0.27540
+en -> de
 
-layer 12, head 8
-- (test) bleu : 0.28398
+layer 6, head 8
+- (training) ppl : 6.66036, acu : 86.251 %
+- (validation) ppl : 14.95462, acu: 59.245 %
+- (test) bleu : 0.20529
 
-layer 8, head 12
-- (training) ppl : 6.94947, acu : 85.097 %
-- (Validation) ppl : 30.94104, acu : 51.773 %
-- (test) bleu : 0.28535
+----------------------------------------------
+Scaling
 
-layer 8, head 8
-- (test) bleu : 0.29825
+de -> en
 
-wmt 14 dataset (preprocess.py에서 multi30k -> wmt14로 변경)
+layer 6, head 8
+- (training) ppl : 6.85121, acu : 85.685 %
+- (validation) ppl : 13.92095, acu: 62.202 %
+- (test) bleu : 0.37815
+
+en -> de
+
+layer 6, head 8
+- (training) ppl : 6.66036, acu : 86.251 %
+- (validation) ppl : 14.95462, acu: 59.245 %
+- (test) bleu : 0.20529
 
 ---
 # Acknowledgement
