@@ -81,11 +81,6 @@ python bleu.py --reference ./.data/multi30k/test2016.en --candidate prediction.t
 # Performance
 ## Training
 
-<p align="center">
-<img src="https://i.imgur.com/S2EVtJx.png" width="400">
-<img src="https://i.imgur.com/IZQmUKO.png" width="400">
-</p>
-
 - Parameter settings:
   - batch size 256 
   - warmup step 4000 
@@ -122,10 +117,6 @@ layer 8, head 8
 
 wmt 14 dataset (preprocess.py에서 multi30k -> wmt14로 변경)
 
-
-# TODO
-  - Evaluation on the generated text.
-  - Attention weight plot.
 ---
 # Acknowledgement
 - The byte pair encoding parts are borrowed from [subword-nmt](https://github.com/rsennrich/subword-nmt/).
